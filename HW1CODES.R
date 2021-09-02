@@ -11,3 +11,8 @@ mean(AGE[female == 1])
 sd(AGE[female == 1])
 mean(AGE[!female])
 sd(AGE[!female])
+
+
+1. Names of people in the study group. 
+
+
