@@ -278,4 +278,70 @@ FTOTINC           INCWAGE          POVERTY         MIGRATE1       MIGRATE1D
 To determine how many people are in the dataset, we can use a command for length:
 print(NN_obs <- length(AGE))
 
+[1] 196585
+
+There are 196,585 people present in this dataset!
+
+Simple Stats
+
+To compare the average age of men and women in the dataset we can use a female dummy variable, the comparison being between those who have the variable female = 1, and those who do not (i.e. female = 0 (men)).
+In the codes below, females are represented through the variable, [female == 1] and males are represented through the logical not, denoted with the "!" symbol, [!female]. Although we are using a logical not symbol to represent the data for males, we can also use [female == 0]. 
+
+summary(AGE[female == 1])
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max. 
+   0.00   23.00   44.00   42.72   61.00   95.00 
+
+> summary(AGE[!female])
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max. 
+   0.00   21.00   40.00   40.35   59.00   95.00 
+
+We can observe that the average age of women in the dataset is 42.72 while the average age for men is 40.35.  
+   
+Next, we can calculate and comapare the average age and standard deviation between men and women. 
+   
+mean(AGE[female == 1])
+[1] 42.71629
+sd(AGE[female == 1])
+[1] 23.72012
+mean(AGE[!female])
+[1] 40.35398
+sd(AGE[!female])
+[1] 23.1098
+
+
+I was interested in comparing the average income between men and women in the dataset and using the commands, "summary(INCWAGE [female == 1])" and "summary(INCWAGE [female == 0])", I discovered that the average male income is twice the amount of the average female income. 
+
+summary(INCWAGE [female == 1])
+Min. 1st Qu.  Median    Mean 3rd Qu.    Max.    NA's 
+      0       0    5000   26229   39400  638000   16277 
+      
+summary(INCWAGE [female == 0])
+Min. 1st Qu.  Median    Mean 3rd Qu.    Max.    NA's 
+      0       0   15000   42042   55000  638000   17150 
+
+
+Noting this difference, I was curious to compare the averages between men and women with various degrees. 
+ 
+> mean(educ_nohs [female == 1])
+[1] 0.2573622
+> mean(educ_nohs [female == 0])
+[1] 0.2854382
+
+> mean(educ_somecoll [female == 1])
+[1] 0.1792074
+> mean(educ_somecoll [female == 0])
+[1] 0.1664216
+
+> mean(educ_college [female == 1])
+[1] 0.1595257
+> mean(educ_college [female == 0])
+[1] 0.153662
+
+> mean(educ_advdeg [female == 1])
+[1] 0.1295443
+> mean(educ_advdeg [female == 0])
+[1] 0.1076852
+
+I find it interesting that despite the averages between men and women who have no high school, some college, college degree and an advanced degree is roughly similar, the average income of the men in the dataset is twicefold the average income of the women in the dataset. 
+Perhaps this stems from my personal belief that higher degree equates to higher pay however, I still find it to be a point of interest. 
 
