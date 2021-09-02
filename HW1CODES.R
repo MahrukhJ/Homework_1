@@ -44,8 +44,10 @@ After much consideration and pondering, I decided that elongating the face of a 
 In order to acheive expansion, I speculated that ever so slightly melting opposite corners on the face of the 6 would create resistance in turning and thus, prevent the die from rolling onto a different face. 
 Experiment #2 details this attempt. 
 Melting opposing corners on the face of the 6, doubled the frequency of rolling a 6, compared to the results of Experiment #1.  
-Following the results of this experiment, I wondered if melting all 4 corners of a preferred face on the die, will increase the frequency. 
+Following the results of this experiment, I wondered if melting all 4 corners of a preferred face on the die, will increase the frequency. Alongside melting the four corners, I also carved ridges on all sides of the face of the 6. 
 Experiment #3 details this attempt. 
+Interestingly, this attempt generated less rolls than the second experiment. Specifically, the fair die landed on a 6, 3 out of 20 rolls, the adjusted die landed on a 6, 6 times out of 20 rolls and the completely adjusted die, landed on a 6, 4 times out of 20. 
+This brings me to the conclusion that the die cannot be adjusted to land on a certain face at an increased frequency when compared to a fair die, given that the probability of a landing on a 6 remains the same. 
 
 After downloading the PUMS data and extracting acs2017_ny_data from the zip file, I was able to set the data to working directory. Now, I can load the data and run commands!
 
@@ -274,15 +276,4 @@ FTOTINC           INCWAGE          POVERTY         MIGRATE1       MIGRATE1D
  Max.   :1.00000   Max.   :1.000     Max.   :1.0000   Max.   :1.0000   Max.   :1.0000
 
 To determine how many people are in the dataset, we can use a command for length:
-
-print(NN_obs <- length(AGE))
-
-[1] 196585
-
-There are 196,585 people present in this dataset!
-
-Simple Stats
-
-To compare the average age of men and women in the dataset we can use a female dummy variable, the comparison being between those who have the variable female = 1, and those who do not (i.e. female = 0 (men)).
-In the codes below, females are represented through the variable, [female == 1] and males are represented through the logical not, denoted with the "!" symbol, [!female]. Although we are using a logical not symbol to represent the data for males, we can also use [female == 0]. 
 
