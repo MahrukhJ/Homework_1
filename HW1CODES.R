@@ -1,18 +1,3 @@
-load("acs2017_ny_data.RData")
-#glimpse(acs2017_ny) try this later
-acs2017_ny[1:10,1:7]
-attach(acs2017_ny)
-summary(acs2017_ny)
-print(NN_obs <- length(AGE))
-summary(AGE[female == 1])
-summary(AGE[!female])
-# here i want to find average ages of men and women
-mean(AGE[female == 1])
-sd(AGE[female == 1])
-mean(AGE[!female])
-sd(AGE[!female])
-
-
 1. Names of people in the study group. 
 
 Experiment #1: Initial Roll           Experiment #2: Adjusted Die           Experiment #3: Completely Destroyed Die
@@ -48,6 +33,7 @@ Following the results of this experiment, I wondered if melting all 4 corners of
 Experiment #3 details this attempt. 
 Interestingly, this attempt generated less rolls than the second experiment. Specifically, the fair die landed on a 6, 3 out of 20 rolls, the adjusted die landed on a 6, 6 times out of 20 rolls and the completely adjusted die, landed on a 6, 4 times out of 20. 
 This brings me to the conclusion that the die cannot be adjusted to land on a certain face at an increased frequency when compared to a fair die, given that the probability of a landing on a 6 remains the same. 
+
 
 After downloading the PUMS data and extracting acs2017_ny_data from the zip file, I was able to set the data to working directory. Now, I can load the data and run commands!
 
