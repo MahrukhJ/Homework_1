@@ -277,4 +277,12 @@ To determine how many people are in the dataset, we can use a command for length
 
 print(NN_obs <- length(AGE))
 
+[1] 196585
+
+There are 196,585 people present in this dataset!
+
+Simple Stats
+
+To compare the average age of men and women in the dataset we can use a female dummy variable, the comparison being between those who have the variable female = 1, and those who do not (i.e. female = 0 (men)).
+In the codes below, females are represented through the variable, [female == 1] and males are represented through the logical not, denoted with the "!" symbol, [!female]. Although we are using a logical not symbol to represent the data for males, we can also use [female == 0]. 
 
