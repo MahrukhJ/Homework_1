@@ -276,4 +276,6 @@ FTOTINC           INCWAGE          POVERTY         MIGRATE1       MIGRATE1D
  Max.   :1.00000   Max.   :1.000     Max.   :1.0000   Max.   :1.0000   Max.   :1.0000
 
 To determine how many people are in the dataset, we can use a command for length:
+print(NN_obs <- length(AGE))
+
 
