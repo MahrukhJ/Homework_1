@@ -200,8 +200,8 @@ summary(acs2017_ny)
  770    : 6279   Mean   :1.116   Mean   :13.03   Mean   :2.701   Mean   :19.77   Mean   :  45245  
  8190   : 5873   3rd Qu.:2.000   3rd Qu.:22.00   3rd Qu.:6.000   3rd Qu.:40.00   3rd Qu.:  56500  
  7870   : 4041   Max.   :2.000   Max.   :29.00   Max.   :6.000   Max.   :99.00   Max.   :1563000  
- (Other):85026                                                                   NA's   :31129    
-    FTOTINC           INCWAGE          POVERTY         MIGRATE1       MIGRATE1D    
+ (Other):85026                                                                   NA's   :31129
+FTOTINC           INCWAGE          POVERTY         MIGRATE1       MIGRATE1D    
  Min.   : -11800   Min.   :     0   Min.   :  0.0   Min.   :0.000   Min.   : 0.00  
  1st Qu.:  35550   1st Qu.:     0   1st Qu.:159.0   1st Qu.:1.000   1st Qu.:10.00  
  Median :  74000   Median : 10000   Median :351.0   Median :1.000   Median :10.00  
