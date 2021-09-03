@@ -1,6 +1,6 @@
 1. Adelia Fida, Hassan Fayyaz, Hugo Pinto, Tanmay Thomas 
 
-Experiment #1: Initial Roll           Experiment #2: Adjusted Die           Experiment #3: Completely Destroyed Die
+Experiment #1: Initial Roll           Experiment #2: Adjusted Die           Experiment #3: Completely Destroyed Die!
 If 6, (1), if 1-5, (0)                If 6, (1), if 1-5, (0)                If 6, (1), if 1-5, (0)
           1                                       1                                       0
           0                                       0                                       0
@@ -331,3 +331,121 @@ Noting this difference, I was curious to compare the averages between men and wo
 I find it interesting that despite the averages between men and women who have no high school, some college, college degree and an advanced degree is roughly similar, the average income of the men in the dataset is twicefold the average income of the women in the dataset. 
 Perhaps this stems from my personal belief that higher degree equates to higher pay however, I still find it to be a point of interest. 
 
+S&P 500 for 08/03/21 - 09-01-21
+
+Date	Open	High	Low	Close	Adj Close	Volume
+1-Sep-21	4,528.80	4,537.11	4,522.02	4,524.09	4,524.09	3,101,830,000
+31-Aug-21	4,529.75	4,531.39	4,515.80	4,522.68	4,522.68	3,090,380,000
+30-Aug-21	4,513.76	4,537.36	4,513.76	4,528.79	4,528.79	2,557,300,000
+27-Aug-21	4,474.10	4,513.33	4,474.10	4,509.37	4,509.37	2,862,360,000
+26-Aug-21	4,493.75	4,495.90	4,468.99	4,470.00	4,470.00	2,704,600,000
+25-Aug-21	4,490.45	4,501.71	4,485.66	4,496.19	4,496.19	2,554,680,000
+24-Aug-21	4,484.40	4,492.81	4,482.28	4,486.23	4,486.23	3,037,770,000
+23-Aug-21	4,450.29	4,489.88	4,450.29	4,479.53	4,479.53	2,965,520,000
+20-Aug-21	4,410.56	4,444.35	4,406.80	4,441.67	4,441.67	2,867,770,000
+19-Aug-21	4,382.44	4,418.61	4,367.73	4,405.80	4,405.80	3,120,840,000
+18-Aug-21	4,440.94	4,454.32	4,397.59	4,400.27	4,400.27	2,965,210,000
+17-Aug-21	4,462.12	4,462.12	4,417.83	4,448.08	4,448.08	2,884,000,000
+16-Aug-21	4,461.65	4,473.26	4,437.66	4,472.94	4,472.94	2,707,170,000
+13-Aug-21	4,464.84	4,468.37	4,460.82	4,468.00	4,468.00	2,371,630,000
+12-Aug-21	4,446.08	4,461.77	4,435.96	4,460.83	4,460.83	2,543,860,000
+11-Aug-21	4,442.18	4,449.44	4,436.42	4,442.41	4,442.41	2,803,060,000
+10-Aug-21	4,435.79	4,445.21	4,430.03	4,436.75	4,436.75	3,219,840,000
+9-Aug-21	4,437.77	4,439.39	4,424.74	4,432.35	4,432.35	2,779,880,000
+6-Aug-21	4,429.07	4,440.82	4,429.07	4,436.52	4,436.52	2,839,970,000
+5-Aug-21	4,408.86	4,429.76	4,408.86	4,429.10	4,429.10	2,734,220,000
+4-Aug-21	4,415.95	4,416.17	4,400.23	4,402.66	4,402.66	3,382,620,000
+3-Aug-21	4,392.74	4,423.79	4,373.00	4,423.15	4,423.15	3,305,340,000
+
+I transferred the data for 08/03/21 - 09-01-21 from Yahoo Finance to an excel sheet and then imported the data into RStudio. 
+
+Then I isolated the date and the adjusted close columns by denoting separate variables and then binding them together.
+
+s_p_date <-S_P_Data_HW_1[, "Date", drop = FALSE] 
+s_p_adjc <-S_P_Data_HW_1[, "Adj Close", drop = FALSE]
+cbind(s_p_date,s_p_adjc)
+
+ Date Adj Close
+1  2021-09-01   4524.09
+2  2021-08-31   4522.68
+3  2021-08-30   4528.79
+4  2021-08-27   4509.37
+5  2021-08-26   4470.00
+6  2021-08-25   4496.19
+7  2021-08-24   4486.23
+8  2021-08-23   4479.53
+9  2021-08-20   4441.67
+10 2021-08-19   4405.80
+11 2021-08-18   4400.27
+12 2021-08-17   4448.08
+13 2021-08-16   4472.94
+14 2021-08-13   4468.00
+15 2021-08-12   4460.83
+16 2021-08-11   4442.41
+17 2021-08-10   4436.75
+18 2021-08-09   4432.35
+19 2021-08-06   4436.52
+20 2021-08-05   4429.10
+21 2021-08-04   4402.66
+22 2021-08-03   4423.15
+23 2021-08-02   4387.16
+
+Now we can caluclate the adjusted close value returns.
+
+#We denote n as the adjusted close values. 
+n <-nrow(s_p_adjc)
+#create a new variable for returns with formula
+s_p_return <- log(s_p_adjc[2:n,1])-log(s_p_adjc[1:(n-1),1])
+
+^This function allows us to continuously compound one month returns. 
+
+summary(s_p_return)
+
+Adj Close       
+ Min.   :-0.87690  
+ 1st Qu.:-0.42575  
+ Median :-0.13847  
+ Mean   :-0.13970  
+ 3rd Qu.: 0.06273  
+ Max.   : 1.08066  
+
+#because the first return is calculated on the second day, we can denote a new variable for clarification since "s_p_date" has 23 entries and "s_p_return" will have 22. 
+
+newdate <- s_p_date[1:22,"Date"]
+
+#bind date and returns
+d_r <- cbind.data.frame(newdate,s_p_return)
+
+print(d_r)
+
+Date   Adj Close
+1  2021-09-01 -0.03117135
+2  2021-08-31  0.13500572
+3  2021-08-30 -0.42973415
+4  2021-08-27 -0.87690456
+5  2021-08-26  0.58419629
+6  2021-08-25 -0.22176661
+7  2021-08-24 -0.14945752
+8  2021-08-23 -0.84876984
+9  2021-08-20 -0.81085771
+10 2021-08-19 -0.12559520
+11 2021-08-18  1.08066397
+12 2021-08-17  0.55733681
+13 2021-08-16 -0.11050293
+14 2021-08-13 -0.16060338
+15 2021-08-12 -0.41378254
+16 2021-08-11 -0.12748955
+17 2021-08-10 -0.09922090
+18 2021-08-09  0.09403679
+19 2021-08-06 -0.16738822
+20 2021-08-05 -0.59874994
+21 2021-08-04  0.46432082
+22 2021-08-03 -0.81700190
+
+I do want to note that we can also use Microsoft Excel to calculate the rate of return for the adjusted close values (it's faster too!) 
+
+The mean return on the S&P 500 dataset is -0.13970, which we found from summary(s_p_return). 
+An example of the mean return on days when the previous day's return was positive can be seen on 2021-08-19, where the return is -0.12559520 and the previous day's return is 1.08066397. 
+Interestingly, on 2021-08-17, the return was also positive, 0.55733681. 
+"Hot hands fallacy" is a "psychological condition that people believe an individual is "hot" or "cold" depending on past performance". The name says it itself, that the concept is based on mistaken belief and I don't think future outcomes are impacted much by past favorable outcomes. In sports however, where the phrase "hot hands" is more commonly used, 
+this may prove to be different. 
