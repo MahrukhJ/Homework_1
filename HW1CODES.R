@@ -1,4 +1,4 @@
-1. Names of people in the study group. 
+1. Adelia Fida, Hassan Fayyaz, Hugo Pinto, Tanmay Thomas 
 
 Experiment #1: Initial Roll           Experiment #2: Adjusted Die           Experiment #3: Completely Destroyed Die
 If 6, (1), if 1-5, (0)                If 6, (1), if 1-5, (0)                If 6, (1), if 1-5, (0)
@@ -25,13 +25,13 @@ If 6, (1), if 1-5, (0)                If 6, (1), if 1-5, (0)                If 6
 Total:
           3                                       6                                       4
 
-After much consideration and pondering, I decided that elongating the face of a preferred number might aid in increasing the frequency, and thus probability, of landing on a preferred number. 
-In order to acheive expansion, I speculated that ever so slightly melting opposite corners on the face of the 6 would create resistance in turning and thus, prevent the die from rolling onto a different face. 
+After much consideration and pondering, I decided that melting the corners of the 6 would remove some weight and might aid in increasing the frequency, and thus probability, of landing on a preferred number. 
+As I was melting the corners, I noticed that the adjusted corners were rough and might even create resistance in turning and thus, prevent the die from rolling onto a different face. 
 Experiment #2 details this attempt. 
-Melting opposing corners on the face of the 6, doubled the frequency of rolling a 6, compared to the results of Experiment #1.  
-Following the results of this experiment, I wondered if melting all 4 corners of a preferred face on the die, will increase the frequency. Alongside melting the four corners, I also carved ridges on all sides of the face of the 6. 
+Melting the corners on the face of the 6 doubled the frequency of rolling a 6, compared to the results of Experiment #1, where a control die was used.
+Following the results of this experiment, I wondered if carving ridges along the sides of the 6 would increase the resistance and frequency. 
 Experiment #3 details this attempt. 
-Interestingly, this attempt generated less rolls than the second experiment. Specifically, the fair die landed on a 6, 3 out of 20 rolls, the adjusted die landed on a 6, 6 times out of 20 rolls and the completely adjusted die, landed on a 6, 4 times out of 20. 
+Interestingly, this attempt generated less rolls than the second experiment. Specifically, the fair die landed on a 6, 3 out of 20 rolls, the adjusted die landed on a 6, 6 times out of 20 rolls and the adjusted die with ridges, landed on a 6, 4 times out of 20. 
 This brings me to the conclusion that the die cannot be adjusted to land on a certain face at an increased frequency when compared to a fair die, given that the probability of a landing on a 6 remains the same. 
 
 
